@@ -8,7 +8,7 @@
   "margin-right" : 300,
 
   "modules-left" : ["hyprland/workspaces"],
-  "modules-center" : [],
+  "modules-center" : ["custom/cava"],
   "modules-right" : ["network","pulseaudio","clock"],
 
 "pulseaudio": {
@@ -70,8 +70,11 @@
     "8":"H",
     "9":"I",
     "10":"J"
-	},
+    },
+  },
+"custom/cava": {
+  "format": "{}",
+  "exec": "~/.config/waybar/cava.sh"
 }
 }
-
 

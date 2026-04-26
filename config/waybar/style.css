@@ -1,19 +1,31 @@
+@import "colors.css";
+
+/* Only to see that the colors actually get applied */
+#waybar{
+    background: alpha(@background, 0.6);
+    padding-top: 5px;
+}
+
 * {
   font-family: Maple Mono;
-  border-radius: 12px;
+  border-radius: 20px;
   font-size: 14px;
-  padding: 2px;
+  /*padding: 2px;*/
 
 
 }
 
+.modules-right{
+    margin-right: 10
+}
 
 #clock, #network, #pulseaudio{
+  color:@on_background;
   margin-right: 4px;
   margin-left: 4px;
   margin-top: 2px;
   margin-bottom: 6px;
-  background-color: brown;
+  background-color: transparent;
   font-weight: bold;
   font-style: italic;
 
@@ -30,15 +42,28 @@
 
 #workspaces {
     margin-left: 6px;
-    background-color: coral;
+    background-color: transparent;
+    font-weight: bold;
+    font-style: italic;
 }
 
-#workspaces button{
-    background-color: crimson
+#workspaces button.inactive{
+    background-color: transparent;
+}
+
+#workspaces button:hover{
+    transition : none;
+    padding: 0 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 #workspaces button.active{
-    margin-left: 6px;
-    margin-right: 6px;
-    background-color: darkblue
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: @error_container;
+    transition: none;
+    padding: 0 15px;
 }

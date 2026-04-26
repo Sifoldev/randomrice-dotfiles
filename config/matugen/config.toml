@@ -18,3 +18,8 @@ post_hook = 'hyprctl reload'
 input_path = '~/.config/matugen/templates/dunst-colors.conf'
 output_path = '~/.config/dunst/dunstrc'
 post_hook = 'killall dunst'
+
+[templates.waybar]
+input_path = '~/.config/matugen/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'killall -9 waybar && waybar &'
